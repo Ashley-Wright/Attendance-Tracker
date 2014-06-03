@@ -30,6 +30,7 @@ gem 'spring',        group: :development
 
 gem 'haml-rails'
 gem 'simple_form'
+gem 'devise'
 
 
 group :test, :development do
