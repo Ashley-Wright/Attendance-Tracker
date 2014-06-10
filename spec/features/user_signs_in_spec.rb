@@ -8,7 +8,7 @@ feature "User signs in" do
     fill_in "Email", with: "joe@example.com"
     fill_in "Password", with: "password"
     click_button "Sign in"
-    page.should have_content "Signed in successfully."
+    expect(page).to have_content "Signed in successfully."
   end
 
   scenario "unsuccessful sign in" do
@@ -17,6 +17,6 @@ feature "User signs in" do
     fill_in "Email", with: "joe@example.com"
     fill_in "Password", with: "password"
     click_button "Sign in"
-    page.should have_content "Invalid email or password."
+    expect(page).to have_content "Invalid email or password."
   end
 end
