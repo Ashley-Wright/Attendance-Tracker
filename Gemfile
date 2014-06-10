@@ -36,6 +36,7 @@ gem 'devise'
 group :test, :development do
   gem 'rspec'
   gem 'rspec-rails'
+  gem 'fabrication'
 end
 
 group :test do
