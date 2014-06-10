@@ -3,7 +3,8 @@ require 'spec_helper'
 feature "User signs in" do
   scenario "successful sign in" do
     Fabricate(:user, email: "joe@example.com", password: "password")
-    visit new_user_session_path
+    visit root_path
+    click_link "Sign In"
     fill_in "Email", with: "joe@example.com"
     fill_in "Password", with: "password"
     click_button "Sign in"
@@ -11,7 +12,8 @@ feature "User signs in" do
   end
 
   scenario "unsuccessful sign in" do
-    visit new_user_session_path
+    visit root_path
+    click_link "Sign In"
     fill_in "Email", with: "joe@example.com"
     fill_in "Password", with: "password"
     click_button "Sign in"
