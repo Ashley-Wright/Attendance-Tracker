@@ -1,0 +1,5 @@
+%h2 Upload a File to Add Students
+
+= form_tag import_students_path, multipart: true do
+  = file_field_tag :upload
+  = submit_tag "Upload"
