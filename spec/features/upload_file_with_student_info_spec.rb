@@ -8,7 +8,7 @@ feature 'Upload File' do
     click_link 'Add Students'
     attach_file('upload', 'spec/data/DRE Program Download for Upload(1)_test.xls')
     click_button 'Upload'
-    pending 'need to implement Student model'
-    expect(Student.count) == 5
+    pending 'need to parse spreadsheet file'
+    Student.count.should == 5
   end
 end
