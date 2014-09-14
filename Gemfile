@@ -41,6 +41,7 @@ end
 
 group :test do
   gem 'capybara'
+  gem 'pry-rails'
   gem 'shoulda'
 end
 

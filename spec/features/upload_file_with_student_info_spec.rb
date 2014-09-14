@@ -6,9 +6,8 @@ feature 'Upload File' do
     user = Fabricate(:user, email: 'joe@example.com', password: 'password')
     sign_in_as user
     click_link 'Add Students'
-    attach_file('upload', 'spec/data/DRE Program Download for Upload(1)_test.xls')
+    attach_file('upload', 'spec/data/DRE Program Download for Upload(1)_test.csv')
     click_button 'Upload'
-    pending 'need to parse spreadsheet file'
     Student.count.should == 5
   end
 end
