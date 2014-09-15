@@ -1,6 +1,3 @@
-require 'spec_helper'
-require 'helpers/user_sessions_helper'
-
 feature "User signs in" do
   scenario "successful sign in" do
     user = Fabricate(:user, email: "joe@example.com", password: "password")

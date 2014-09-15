@@ -1,6 +1,3 @@
-require 'spec_helper'
-require 'helpers/user_sessions_helper'
-
 feature 'Upload File' do
   background do
     user = Fabricate(:user, email: 'joe@example.com', password: 'password')

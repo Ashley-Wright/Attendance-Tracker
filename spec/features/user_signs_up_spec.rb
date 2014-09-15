@@ -1,5 +1,3 @@
-require 'spec_helper'
-
 feature "User signs up" do
   scenario "successful sign up" do
     visit root_path
