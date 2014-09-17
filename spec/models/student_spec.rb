@@ -1,6 +1,8 @@
 require 'spec_helper'
 
 describe Student do
+  it { should have_many :attendances }
+
   it { should validate_presence_of :name }
   it { should validate_presence_of :psi }
   it { should validate_presence_of :first }
