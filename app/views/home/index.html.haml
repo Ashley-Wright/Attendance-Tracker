@@ -1,1 +1,8 @@
 %h1 Top Floor's Attendance Tracker
+
+- if current_user
+  = simple_form_for :attendance, url: new_attendance_path, method: :get, remote: true do |f|
+    = f.select(:student, @students.collect { |s| [ s.name, s.id ] })
+    = f.button :submit, 'Submit'
+
+#attendance-form

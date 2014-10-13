@@ -9,7 +9,10 @@ Rails.application.routes.draw do
 
   resources :students, only: :new do
     collection { post :import }
+    resources :attendances, only: :create
   end
+
+  resources :attendances, only: :new
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
