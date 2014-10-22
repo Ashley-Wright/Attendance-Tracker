@@ -8,4 +8,8 @@
 #attendance-form
 
 :javascript
-  $(document).ready(function(){ $('#attendance_student').select2({placeholder: "Select a Student", allowClear: true}); });
+  $(document).ready(function(){
+    $('#attendance_student').select2({placeholder: "Select a Student", allowClear: true});
+    $('.select2-container').find('.select2-focusser').focus();
+  });
+
