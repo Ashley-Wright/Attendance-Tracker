@@ -3,7 +3,6 @@
 - if current_user
   = simple_form_for :attendance, url: new_attendance_path, method: :get, remote: true do |f|
     = f.select(:student, @students.collect { |s| [ s.name, s.id ] }, include_blank: true)
-    = f.button :submit, 'Submit'
 
 #attendance-form
 
@@ -11,5 +10,6 @@
   $(document).ready(function(){
     $('#attendance_student').select2({placeholder: "Select a Student", allowClear: true});
     $('.select2-container').find('.select2-focusser').focus();
+    $('#attendance_student').on("change", function() {$(this).parent('form').submit();});
   });
 
